@@ -2,26 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
-@media (prefers-color-scheme: dark) {
+.project {
+  flex: 1;
+  margin: 0;
+  padding: 20px;
+  border: 2px solid pink;
+  border-radius: 10px;
+}
+
+
+form div {
+  margin-bottom: 10px;
+}
+.p-4{
+  padding: 0;
+}
+  footer {
+    color: #000;
+    margin-top: 10px;
+    border-top: 2px dashed lightgrey;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  @media (max-width: 600px) {
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  footer p {
+    margin: 10px 0;
+  }
+ #button {
+  margin-left: 0;
+
+ }
+ section {
+  margin-top: 40%;
+ }
+ 
+ 
+
+  }
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-geist-sans: 'Geist Sans', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  body {
+    margin: 5%;
+    font-family: var(--font-geist-sans);
   }
-}
+ 
